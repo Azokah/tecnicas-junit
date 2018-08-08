@@ -9,18 +9,28 @@ package practico01;
  *
  * @author lab14
  */
-public class Pasaje {
+public class Pasaje implements Producto{
     
     private String posicion;
     private Vuelo vuelo;
     private Pasajero pasajero;
+    private Float costo;
 
-    public Pasaje(String posicion, Vuelo vuelo, Pasajero pasajero) {
+    public Pasaje(String posicion, Vuelo vuelo, Pasajero pasajero, Float costo) {
         this.posicion = posicion;
         this.vuelo = vuelo;
         this.pasajero = pasajero;
+        this.costo = costo;
     }
 
+    public Float getCosto() {
+        return costo;
+    }
+
+    public void setCosto(Float costo) {
+        this.costo = costo;
+    }
+    
     public String getPosicion() {
         return posicion;
     }
@@ -43,6 +53,11 @@ public class Pasaje {
 
     public void setPasajero(Pasajero pasajero) {
         this.pasajero = pasajero;
+    }
+
+    @Override
+    public Float getPrecio() {
+        throw new UnsupportedOperationException("Not supported yet.");   
     }
 
 
